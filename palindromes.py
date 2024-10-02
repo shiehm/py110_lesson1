@@ -44,8 +44,8 @@ Algorithm (2-parts)
 
 def substring(string):
     substrings = []
-    for i in range(len(string) - 1):
-        for e in range(i + 2, len(string) + 1):
+    for i in range(len(string) - 1): # This is the starting index, so it'll go from 0 to the 2nd to last, since range is exclusive of the ending 
+        for e in range(i + 2, len(string) + 1): # Note this needs the + 1 otherwise it'll be ending with e = range(7, 7) which returns nothing 
             substrings.append(string[i:e])
     return substrings
 
